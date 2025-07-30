@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi página con chatbot de pantalla completa</title>
     <style>
-        body {
+        body, html {
             margin: 0;
-            overflow: hidden; /* Evita el scroll si el chatbot ya ocupa todo */
-        }
-        zapier-interfaces-chatbot-embed {
-            position: fixed;
-            top: 0;
-            left: 0;
+            padding: 0;
             width: 100%;
             height: 100%;
-            z-index: 9999; /* Asegura que esté por encima de otros elementos */
+            overflow: hidden; /* Evita las barras de scroll */
+        }
+        zapier-interfaces-chatbot-embed {
+            /* Estas propiedades aseguran que el chatbot ocupe todo el espacio disponible */
+            width: 100%;
+            height: 100%;
+            display: block; /* Asegura que se comporte como un bloque */
         }
     </style>
 </head>
 <body>
     <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmd7kpet20011qeq76glimcjc'></zapier-interfaces-chatbot-embed>
+    
+    <zapier-interfaces-chatbot-embed chatbot-id='cmd7kpet20011qeq76glimcjc'></zapier-interfaces-chatbot-embed>
 </body>
 </html>
